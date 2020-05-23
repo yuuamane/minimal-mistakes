@@ -1,11 +1,13 @@
 # main links
 main:
   - title: "About"
-    url: https://yuuamane.github.io/about/
+    url: /about/
   - title: "Space"
-    url: https://yuuamane.github.io/space/
+    url: /space/
   - title: "Resume"
     url: /assets/docs/Resume_Faaez_Razeen.pdf
+   -title: "Archive"
+    url: /archive/
  
   # - title: "Sample Collections"
   #   url: /collection-archive/
