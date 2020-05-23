@@ -23,7 +23,7 @@ subtitle                 : "Chronicles of Unindented Code"
 name                     : "Faaez Razeen"
 description              : "A blog that records Faaez Razeen's programming journey."
 url                      : "https://yuuamane.github.io"
-baseurl                  : 
+baseurl                  : "/blog"
 repository               : yuuamane/yuuamane.github.io
 teaser                   : 
 logo                     : "/assets/images/fr-logo.png"

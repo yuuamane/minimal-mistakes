@@ -4,10 +4,7 @@ title: "Predicting Movie Revenue using Regression Techniques"
 header:
   teaser: /assets/images/thumbnails/movie_theatre.jpg
 comments: true
-excerpt: "Wanted to check if a movie's revenue can be successfully predicted using features available on IMDb
-and other social media websites. Using datasets retrieved from Kaggle, preprocessed and modelled the
-data using a variety of machine learning algorithms. Also found which features are most important in
-determining the revenue of a movie."
+excerpt: "A post on how I leveraged machine learning in order to predict the revenue of a movie, and also determine which features are most important in determining the revenue."
 date: March 28th, 2020
 ---
 
