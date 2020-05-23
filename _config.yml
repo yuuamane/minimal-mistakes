@@ -26,7 +26,7 @@ url                      : "https://yuuamane.github.io"
 baseurl                  : 
 repository               : yuuamane/yuuamane.github.io
 teaser                   : "/assets/images/teaser.jpg"
-logo                     : "/assets/images/fr_logo.png"
+logo                     : "/assets/images/red_nebula.jpg"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true
 words_per_minute         : 200
@@ -207,7 +207,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Calcutta
 
 
 # Plugins (previously gems:)
