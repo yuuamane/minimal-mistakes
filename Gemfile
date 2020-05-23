@@ -1,5 +1,4 @@
 source "https://rubygems.org"
-<<<<<<< HEAD
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -27,4 +26,3 @@ gem "minimal-mistakes-jekyll"
 # If you have any other plugins, put them here!
 group :jekyll_plugins do
 end
-=======
