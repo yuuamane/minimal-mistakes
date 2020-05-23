@@ -1,5 +1,5 @@
 ---
-permalink: /blog/data-science-03
+permalink: /data-science-03
 title: "Predicting Movie Revenue using Regression Techniques"
 header:
   teaser: /assets/images/thumbnails/movie_theatre.jpg

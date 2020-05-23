@@ -1,5 +1,5 @@
 ---
-permalink: /blog/data-science-02
+permalink: /data-science-02
 title: "Using Foursquare API to analyze Chennai's neighborhoods"
 header:
   teaser: /assets/images/thumbnails/neighborhood.jpg

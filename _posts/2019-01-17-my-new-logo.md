@@ -1,5 +1,5 @@
 ---
-permalink: /blog/my-first-logo
+permalink: /my-first-logo
 title: "My First Ever Logo"
 header:
   teaser: /assets/images/thumbnails/logo.jpg

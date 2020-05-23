@@ -1,5 +1,5 @@
 ---
-permalink: /blog/data-science-01
+permalink: /data-science-01
 title: "Exploratory Data Analysis on IMDb Movies"
 header:
   teaser: /assets/images/thumbnails/clapperboard.jpg

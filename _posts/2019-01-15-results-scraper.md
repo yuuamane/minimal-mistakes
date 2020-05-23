@@ -1,5 +1,5 @@
 ---
-permalink: /blog/web-scraping-01
+permalink: /web-scraping-01
 title: "Web Scraping with Python"
 header:
   teaser: /assets/images/thumbnails/code.jpg
