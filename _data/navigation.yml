@@ -6,7 +6,7 @@ main:
     url: /space/
   - title: "Resume"
     url: /assets/docs/Resume_Faaez_Razeen.pdf
-   -title: "Archive"
+  - title: "Archive"
     url: /archive/
  
   # - title: "Sample Collections"
