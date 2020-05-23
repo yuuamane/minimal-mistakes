@@ -1,9 +1,9 @@
 # main links
 main:
   - title: "Space"
-    url: https://yuuamane.github.io/me
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+    url: https://yuuamane.github.io/space
+    title: "About"
+    url: https://yuuamane.github.io/about/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
