@@ -19,11 +19,11 @@ minimal_mistakes_skin    : "dark"
 locale                   : "en-GB"
 title                    : "Faaez's Blog"
 title_separator          : "-"
-subtitle                 : "Chronicles of unindented code"
+subtitle                 : "Chronicles of Unindented Code"
 name                     : "Faaez Razeen"
 description              : "A blog that records Faaez Razeen's programming journey."
 url                      : "https://yuuamane.github.io"
-baseurl                  : 
+baseurl                  : "/blog"
 repository               : 
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/fr_logo.png"
