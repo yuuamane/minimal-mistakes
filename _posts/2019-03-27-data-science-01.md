@@ -1,8 +1,11 @@
 ---
-layout: post
 permalink: /blog/data-science-01
-title: Exploratory Data Analysis on IMDb Movies
+title: "Exploratory Data Analysis on IMDb Movies"
+header:
+  teaser: /assets/images/thumbnails/clapperboard.jpg
 comments: true
+excerpt: "This post is about the exploratory data analysis that I conducted on data that I manually scraped from IMDb and used it to achieve some interesting insights on the movie industry."
+date: March 27th, 2019
 ---
 
 <style>

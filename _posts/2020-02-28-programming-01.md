@@ -1,8 +1,11 @@
 ---
-layout: post
 permalink: /blog/programming-01
-title: Bash scripting is cool
+title: "Bash scripting is cool"
+header:
+  teaser: /assets/images/thumbnails/linux.jpg
 comments: true
+excerpt: "In this post, I explain how I set up a very basic automatic file download system for an on-premise data warehouse using AWS S3 and a bit of bash scripting."
+date: February 28th, 2020
 ---
 
 <style>

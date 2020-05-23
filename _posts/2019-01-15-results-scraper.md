@@ -1,8 +1,11 @@
 ---
-layout: post
 permalink: /blog/web-scraping-01
-title: Web Scraping with Python
+title: "Web Scraping with Python"
+header:
+  teaser: /assets/images/thumbnails/code.jpg
 comments: true
+excerpt: "An interesting story on how I built a script to automatically retrieve exam results from a university exam portal using Selenium and Python."
+date: January 15th, 2019
 ---
 
 <style>

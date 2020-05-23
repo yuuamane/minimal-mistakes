@@ -1,8 +1,14 @@
 ---
-layout: post
 permalink: /blog/data-science-02
-title: Using Foursquare API to analyze Chennai's neighborhoods
+title: "Using Foursquare API to analyze Chennai's neighborhoods"
+header:
+  teaser: /assets/images/thumbnails/neighborhood.jpg
 comments: true
+excerpt: "As part of a capstone project on the IBM Data Science Specialization on Coursera, I analyzed various
+neighbourhoods in Chennai using the Foursquare API to find which neighbourhood you should live in if
+you love food. Initial location data was scraped manually using BeautifulSoup. Clustered
+neighbourhoods using k-means and visualized using Folium, a map visualization library."
+date: Jan 18th, 2020
 ---
 
 <style>

@@ -1,8 +1,11 @@
 ---
-layout: post
 permalink: /blog/my-first-logo
-title: My First Ever Logo
+title: "My First Ever Logo"
+header:
+  teaser: /assets/images/thumbnails/logo.jpg
 comments: true
+excerpt: "A short frustrating story on how I preemptively jumpted into the intricate world of logo design."
+date: January 17th, 2019
 ---
 
 <style>
