@@ -28,6 +28,3 @@ gem "minimal-mistakes-jekyll"
 group :jekyll_plugins do
 end
 =======
-gemspec
-gem "minimal-mistakes-jekyll"
->>>>>>> 93af506b831d06ae6065fe680331133a5a5d23af
