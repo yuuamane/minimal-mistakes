@@ -25,7 +25,7 @@ description              : "A blog that records Faaez Razeen's programming journ
 url                      : "https://yuuamane.github.io"
 baseurl                  : 
 repository               : yuuamane/yuuamane.github.io
-teaser                   : "/assets/images/teaser.jpg"
+teaser                   : 
 logo                     : "/assets/images/fr-logo.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true
