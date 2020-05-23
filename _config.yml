@@ -26,7 +26,7 @@ url                      : "https://yuuamane.github.io"
 baseurl                  : 
 repository               : yuuamane/yuuamane.github.io
 teaser                   : "/assets/images/teaser.jpg"
-logo                     : "/assets/images/red_nebula.jpg"
+logo                     : "/assets/images/fr-logo.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true
 words_per_minute         : 200
