@@ -20,7 +20,7 @@ I'm going to explain how my results scraper works. A very simple script that I b
 
 The script works using [Selenium](https://www.seleniumhq.org/), a portable framework for testing web applications which can be used to interact with HTML elements. If you look at my results page, it looks like this: 
 
-![landing-page](/images/landing-page.png){: .center-image .img-responsive}
+![landing-page](/assets/images/web-scraping-01/landing-page.png){: .center-image .img-responsive}
 
 Pretty basic. An input element, a dropdown list, and an enter button. For the sake of simplicity (and just because I was lazy), I decided to not have any interaction with the dropdown list. Which means I could get the results of everyone who wrote just the most recent semester examination. Also, further down the line, I lost the need to implement this because.... *sigh*... I'll explain at the end. 
 
@@ -28,7 +28,7 @@ So I get the IDs of the input box and button, which I used to paste a number int
 
 So then we arrive at the following: 
 
-![results-screen](/images/results-screen.png){: .center-image .img-responsive}
+![results-screen](/assets/images/web-scraping-01/results-screen.png){: .center-image .img-responsive}
 
 For whatever reason, some roll numbers don't exist, due to which my script initially failed. It took me half a day to come up with the solution, mainly because this was my first time working with Selenium and I had *no clue* about the intricacies of web scraping. Moreover, I possess the attention span of a goddamn goldfish. Moving on...
 
@@ -53,7 +53,7 @@ I ain't gonna explain this. Figure it out yourself.
 
 The script does this for each number, and it appends them one by one to a .csv file. Near the end of the script, I was getting frustrated, because I have this tendency to lose motivation quickly. So I just used our good ol' companion StackOverflow to get the code to write these lists to the .csv file. Finally, the outcome is this: 
 
-![results-csv](/images/results-csv.png){: .center-image .img-responsive}
+![results-csv](/assets/images/web-scraping-01/results-csv.png){: .center-image .img-responsive}
 
 So. The gist of it is as follows: 
 
@@ -66,7 +66,7 @@ So. The gist of it is as follows:
 
 All in all, it takes a pretty long time to do everything, considering there's about 200 students. I had an itch at the back of mind, thinking to myself, "maybe I can make it faster if I use multithreading or some shit". Well it turns out my hunch was right, some dude pointed out in the comments of my Quora answer: 
 
-![quora-comment](/images/quora-comment.png){: .center-image .img-responsive}
+![quora-comment](/assets/images/web-scraping-01/quora-comment.png){: .center-image .img-responsive}
 
 Maybe another day.
 
@@ -88,12 +88,12 @@ I thought I could add the dropdown list to my script to get more info for my dat
 
 Nothing complicated, just wanted to try something out, so I drew a distribution plot of GPAs using Seaborn and I got the following output: 
 
-![dist-plot](/images/dist-plot-gpa.png){: .center-image .img-responsive}
+![dist-plot](/assets/images/web-scraping-01/dist-plot-gpa.png){: .center-image .img-responsive}
 
 The mean GPA was 6.54. (higher than I expected, lol) I also wanted to see if there was any correlation between the roll number and the GPA using a scatter plot, and as you and I might have guessed, there wasn't. 
 
 
-![scatter-plot](/images/scatter-plot-gpa.png){: .center-image .img-responsive}
+![scatter-plot](/assets/images/web-scraping-01/scatter-plot-gpa.png){: .center-image .img-responsive}
 
 Till we meet again, 
 
