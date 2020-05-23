@@ -118,13 +118,13 @@ Interesting. The reason for them using a weighted average is to enforce the conc
 Interesting! While IMDb is wholely dependent on the individual users, Metacritic uses scores from public critic reviews. Looking at the scoring metric for both of these, I can guess that correlation between them will be positive, as the people rating them are in fact, humans. 
 
 
-![imdb-vs-meta-scatter](/images/ds-01/1.png){: .center-image .img-responsive}
+![imdb-vs-meta-scatter](/assets/images/ds-01/1.png){: .center-image .img-responsive}
 
 
 As evident by the KDE plot below, IMDb and Meta ratings have the same opinions on movies with a ratings of 6 - 6.5 (or 60 - 65).
 With both these graphs, we can make our first inference:
 
-![imdb-vs-meta-kde](/images/ds-01/2.png){: .center-image .img-responsive}
+![imdb-vs-meta-kde](/assets/images/ds-01/2.png){: .center-image .img-responsive}
 
 **Inference 1:** People and critics tend to have the same view on movies. Both have the same opinions one movies with a rating of 6 (or 60).
 
@@ -132,7 +132,7 @@ With both these graphs, we can make our first inference:
 This distribution plot for each metric is shown below. I'm guessing this is because meta ratings are done by critics, who take a lot into account and is kinda their job to do this sort of stuff. So their ratings are gonna vary a bit. That's why the distribution mirrors a normal distribution. Meanwhile, IMDb ratings are done by us, normal folk. If we like a movie, we give it a high rating, and we tend to do so a lot. 
 
 
-![imdb-vs-meta-dist](/images/ds-01/3.png){: .center-image .img-responsive}
+![imdb-vs-meta-dist](/assets/images/ds-01/3.png){: .center-image .img-responsive}
 
 
 **Inference 2:** Meta ratings follow a normal distribution while IMDb ratings tend to favour the 5 - 8 range.
@@ -141,7 +141,7 @@ This distribution plot for each metric is shown below. I'm guessing this is beca
 Violin plots for rating distributions for each genre didn't give much info, other than the fact that biography movies tend to get high ratings. For 7 genres, the number of movies were 10 or below, so I'm not going to take them into account. These 7 genres cause their respective violin plots to look like whack, as evident in the Jupyter Notebook linked at the bottom of this page. 
 
 
-![biography-violin](/images/ds-01/4.png){: .center-image .img-responsive}
+![biography-violin](/assets/images/ds-01/4.png){: .center-image .img-responsive}
 
 
 **Inference 3:** Biography movies tend to have high ratings.
@@ -150,7 +150,7 @@ Violin plots for rating distributions for each genre didn't give much info, othe
 Boxplots show us an interesting thing. This dataset has a *lot* of outliers. I don't know if it is due to the fact that the dataset is massive, or the inherent unpredictability of movies. 
 
 
-![boxplot-genre](/images/ds-01/5.png){: .center-image .img-responsive}
+![boxplot-genre](/assets/images/ds-01/5.png){: .center-image .img-responsive}
 
 
 **Inference 4:** In the world of movies, there tend to be a lot of outliers.
@@ -175,32 +175,32 @@ Here are the lowest and highest rated movies of each rating metric:
 Each movie had anywhere from 1 to 3 genres. To simplify the process, I figured the first genre for each movie would be most accurate. Looking at the dataset, only the first 9 genres are the most abundant.
 
 
-![genre-count](/images/ds-01/6.png){: .center-image .img-responsive}
+![genre-count](/assets/images/ds-01/6.png){: .center-image .img-responsive}
 
 
 First thing I wanted to see was if there was any correlation between the IMDb score and box office. There wasn't. Same can be inferred for meta ratings, as they are positively correlated. 
 
 
-![imdb-vs-rating](/images/ds-01/7.png){: .center-image .img-responsive}
+![imdb-vs-rating](/assets/images/ds-01/7.png){: .center-image .img-responsive}
 
 
 **Inference 5:** No correlation between IMDb or meta scores and movie box office.
 
 
 Next, I wanted to check out the mean gross for each genre. Barplot would be perfect for this. 
-![gross-per-genre](/images/ds-01/8.png){: .center-image .img-responsive}
+![gross-per-genre](/assets/images/ds-01/8.png){: .center-image .img-responsive}
 
 
 Hmmm. Notice the big black line for the Family genre? It indicates that there is a high chance of it being erroneous. It's called an [error bar.](https://en.wikipedia.org/wiki/Error_bar) The reason for this is the fact that there are only 2 movies in the Family genre, and one of them was Beauty and the Beast, which earned a whopping $504 million box office. That's a lot. 
 
 
-![family-movies](/images/ds-01/9.png){: .center-image .img-responsive}
+![family-movies](/assets/images/ds-01/9.png){: .center-image .img-responsive}
 
 
 I wanted to see how much profit Family movies made per minute. It turned out to **2.2 million per minute of screentime!**. Family movies are the most profitable, followed by Animation and Action. 
 
 
-![movies-ppm](/images/ds-01/10.png){: .center-image .img-responsive}
+![movies-ppm](/assets/images/ds-01/10.png){: .center-image .img-responsive}
 
 
 **Inference 6:** Family movies had the best profit per movie value.
@@ -212,7 +212,7 @@ I wanted to see how much profit Family movies made per minute. It turned out to 
 The sum of gross for each movie show that Action movies made the most money.
 
 
-![sum-of-grosses](/images/ds-01/11.png){: .center-image .img-responsive}
+![sum-of-grosses](/assets/images/ds-01/11.png){: .center-image .img-responsive}
 
 
 
@@ -225,14 +225,14 @@ The sum of gross for each movie show that Action movies made the most money.
 The barplot of the count of each movie shows that Comedy movies were the most frequent.
 
 
-![number-of-movies-of-each-genre](/images/ds-01/12.png){: .center-image .img-responsive}
+![number-of-movies-of-each-genre](/assets/images/ds-01/12.png){: .center-image .img-responsive}
 
 
 **Inference 9:** Comedy movies were the most frequently released, followed by drama and action movies.
 
 
 The average rating per genre doesn't seem to change much for IMDb. This follows up with my finding that IMDb ratings tend to favor the 6-8 range, and this is evident by the barplot below. 
-![avg-imdb-rating](/images/ds-01/13.png){: .center-image .img-responsive}
+![avg-imdb-rating](/assets/images/ds-01/13.png){: .center-image .img-responsive}
 
 
 **Inference 10:** For IMDb ratings, on average, horror movies got the lowest ratings while war, documentary, and musical movies seem to get the highest.
@@ -244,7 +244,7 @@ The average rating per genre doesn't seem to change much for IMDb. This follows 
 Meanwhile, for meta ratings, the average rating per genre tend to be more varied than the IMDb ratings. 
 
 
-![avg-meta-rating](/images/ds-01/14.png){: .center-image .img-responsive}
+![avg-meta-rating](/assets/images/ds-01/14.png){: .center-image .img-responsive}
 
 
 **Inference 12:** For meta ratings, documentary movies get the highest average rating, while Sci-Fi and Horror get the lowest.
@@ -260,20 +260,20 @@ From Inferences 10 and 12, we can derive another inference:
 
 
 ## Runtime
-![movie-duration](/images/ds-01/15.png){: .center-image .img-responsive}
+![movie-duration](/assets/images/ds-01/15.png){: .center-image .img-responsive}
 
 
 **Inference 15:** Biography movies had the longest average duration. (117 mins). Musical movies had the lowest. (90 minutes)
 
 
-![min-max-duration](/images/ds-01/16.png){: .center-image .img-responsive}
+![min-max-duration](/assets/images/ds-01/16.png){: .center-image .img-responsive}
 **Inference 16:** Longest movie was 'The Best of Youth', which ran for 366 minutes (6 hours). Shortest movie was 'Ghost of the Abyss', which ran for 61 minutes. (1 hour)
 
 
 The scatter plot for runtime against gross shows that they are slightly correlated. 
 
 
-![gross-vs-runtime](/images/ds-01/17.png){: .center-image .img-responsive}
+![gross-vs-runtime](/assets/images/ds-01/17.png){: .center-image .img-responsive}
 **Inference 17:** Runtime and box office are slightly correlated. Meaning, if the duration of a movie is more, it earns more.
 
 
@@ -283,7 +283,7 @@ The scatter plot for runtime against gross shows that they are slightly correlat
 Boxplot of mean box office per year shows that the gross has increased as the years progressed. Maybe this is because more people are starting to watch movies or spend more on movies than before. Also notice the error bars. They seem to be pretty high here.
 
 
-![avg-gross-per-year](/images/ds-01/18.png){: .center-image .img-responsive}
+![avg-gross-per-year](/assets/images/ds-01/18.png){: .center-image .img-responsive}
 **Inference 18:** Average earning for movies increased as time went on. 
 
 

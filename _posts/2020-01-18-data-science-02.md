@@ -171,22 +171,22 @@ for lat, lon, poi, cluster in zip(chennai_merged['Latitude'], chennai_merged['Lo
 map_clusters
 ```
 
-![folium-chennai](/images/ds-02/folium.png){: .center-image .img-responsive}
+![folium-chennai](/assets/images/ds-02/folium.png){: .center-image .img-responsive}
 
 Not much can be inferred from this map. Due to the fact that the clusters are grouped together not due to their Euclidean distances on the map, but due to properties of the venues themselves. Inspecting the dataframe which has the cluster labels along with the most frequent venue in each neighborhood, we can see that:
 
  * Cluster 0 (Red) have Indian Restaurants as their most frequent venue.
-![folium-chennai](/images/ds-02/clus0.png){: .center-image .img-responsive}
-![folium-chennai](/images/ds-02/clus0_bar.png){: .center-image .img-responsive}
+![folium-chennai](/assets/images/ds-02/clus0.png){: .center-image .img-responsive}
+![folium-chennai](/assets/images/ds-02/clus0_bar.png){: .center-image .img-responsive}
 
 * Cluster 1 (Blue)'s frequent venues are mostly related to food. Evident by counting the occurences of each.
-![folium-chennai](/images/ds-02/clus1.png){: .center-image .img-responsive}
+![folium-chennai](/assets/images/ds-02/clus1.png){: .center-image .img-responsive}
 
 * Cluster 2 (Black) has pharmacies as the most frequent venues. 
-![folium-chennai](/images/ds-02/clus2.png){: .center-image .img-responsive}
+![folium-chennai](/assets/images/ds-02/clus2.png){: .center-image .img-responsive}
 
 * Cluster 3 (Yellow) has multiple forms of transport as the most frequent venues. 
-![folium-chennai](/images/ds-02/clus3.png){: .center-image .img-responsive}
+![folium-chennai](/assets/images/ds-02/clus3.png){: .center-image .img-responsive}
 
 Use these results, we can solve our trivial problem. Nolan should move to neighborhoods in either Cluster 0 or Cluster 1, as they have a high concentration of restaurants and other food-related venues.
 

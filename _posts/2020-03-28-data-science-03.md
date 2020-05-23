@@ -68,7 +68,7 @@ Since two datasets were merged, columns like revenue were repeated- one from eac
 (abs(movies['revenue'] - movies['gross']) / (movies['revenue'] + movies['gross']) * 100).mean()
 ```
 
-![revenue-diff](/images/ds-03/revenue_diff.png){: .center-image .img-responsive}
+![revenue-diff](/assets/images/ds-03/revenue_diff.png){: .center-image .img-responsive}
 
 Why was that? After manually googling a randomly sampled movie and checking out its revenue, I found out that one dataset contained global revenue and another contained revenue for the U.S. only. Since I want the scope of the project to be simple, I decided to use the column with U.S. revenue and discard the other. 
 
@@ -83,11 +83,11 @@ Next, genre. There were yet again two more the of the same columns. I discarded 
 print(movies['genres_x'].fillna('[]').apply(literal_eval).apply(lambda x: len([i['name'] for i in x]) if isinstance(x, list) else []).mean())
 print(movies['genres_y'].apply(lambda x: len(x.split("|"))).mean())
 ```
-![sprf](/images/ds-03/sprf.png){: .center-image .img-responsive}
+![sprf](/assets/images/ds-03/sprf.png){: .center-image .img-responsive}
 
 This next step contradicts my previous step. I will filter out and use only one genre. While knowing all the genres of a movie might help in building something like a movie recommender system, I do not see the point in using each listed genre of a movie for this project. There was also a feature which listed plot keywords, which would be a massive boon in recommender systems. But then again, that's not the goal here. (I also don't know how to build one). Guess which movie this is referring to:
 
-![revenue-difference](/images/ds-03/plot_keyword_toystory.png){: .center-image .img-responsive}
+![revenue-difference](/assets/images/ds-03/plot_keyword_toystory.png){: .center-image .img-responsive}
 
 I then converted the release dates which were objects to a datetime format for convenience. 
 
@@ -135,15 +135,15 @@ First step was the usual summary statistics. Nothing out of the ordinary. In tot
 
 I took a pairplot and I can infer nothing from this except the fact that it looks cool:
 
-![pairplot](/images/ds-03/pairplot.png){: .center-image .img-responsive}
+![pairplot](/assets/images/ds-03/pairplot.png){: .center-image .img-responsive}
 
 Looking at the distribution of the dependent variable, revenue, we can see that it exhibits a Pareto distribution. Right now it's beyond my scope to understand what a Pareto distribution actually is. Though as you can see, the distribution isn't normal. If you take log of the values, you will ensure normality but this made a lot more problems down the line that I wasn't equipped to handle. And as mentioned before, since this is just prediction, normality won't matter.
 
-![revenue_dist](/images/ds-03/revenue_dist.png){: .center-image .img-responsive}
+![revenue_dist](/assets/images/ds-03/revenue_dist.png){: .center-image .img-responsive}
 
 Next, looking at the barplot of the number of movies released each year, we can see that the bulk of the graph is towards the right. I'll take 1995 as the cutoff year, i.e. only taking movies released after 1995 into account. The main reason is that we don't have a lot of movies released before around the 1995 mark. Another reason for the cutoff is that the budgets/revenue are not adjusted for inflation over time. Another reason is that movies of the previous century tend to be different than the movies of the 2000s in a lot of ways. For instance, the budget allocated for movies after 2000 would be much more than ones before 2000. Again, inflation probably plays a role here but for simplicity I will not be working with the old movies. Looking at the overall budgets each year, I could've taken 1990 but it had a few empty values for some months- which I found using a heatmap, so I chose 1995.
 
-![count_of_movies_each_year](/images/ds-03/count_of_movies_each_year.png){: .center-image .img-responsive}
+![count_of_movies_each_year](/assets/images/ds-03/count_of_movies_each_year.png){: .center-image .img-responsive}
 
 ```python
 pd.DataFrame(movies.groupby('release_year').sum()['budget'])
@@ -221,7 +221,7 @@ pd.DataFrame(movies.groupby('release_year').sum()['budget'])
 
 Looking at a heatmap of the revenue over different months of different years, we can see that most revenue is made in the months May, June, July, November, and December. 
 
-![heatmap](/images/ds-03/heatmap.png){: .center-image .img-responsive}
+![heatmap](/assets/images/ds-03/heatmap.png){: .center-image .img-responsive}
 
 
 # Feature Engineering
@@ -234,7 +234,7 @@ Woo! Exciting! Never tried this before, however I made three very basic features
 
 * *action_or_adventure*: The revenue across different genres were studied on. Upon visual analysis, it was found that Action and Adventure movies on average earned more revenue when compared to other genres. Thus, a new column was created, which contains a 1 if the genre of the movie is either action/adventure, else contains a 0. I'm not statisically sound yet, but I do know that the error bars here represent the level of uncertainty for that particular genre. Taking that into account, we're left with action and adventure genres. 
 
-![avg_revenue_per_genre](/images/ds-03/avg_revenue_per_genre.png){: .center-image .img-responsive}
+![avg_revenue_per_genre](/assets/images/ds-03/avg_revenue_per_genre.png){: .center-image .img-responsive}
 
 ```python
 movies_numerical['action_or_adventure'] = movies['genre'].apply(lambda x: 1 if x == 'Action' or x == 'Adventure' else 0)
@@ -292,14 +292,14 @@ regressor_OLS = sm.OLS(endog = Y, exog = X, hasconst = True).fit()
 regressor_OLS.summary()
 ```
 
-![ols](/images/ds-03/ols.png){: .center-image .img-responsive}
+![ols](/assets/images/ds-03/ols.png){: .center-image .img-responsive}
 
 
 ### Multicollinearity
 
 Multicollinearity is when a feature may be correlated with another feature. For inference, this needs to be removed. Why? If two variables contribute approximately the same to the dependent variable's outcome, it's useless to use both since we cannot measure individual contribution and importance of a single variable. The heatmap below shows that multicollinearity indeed exists but I will not be removing them. As I've mentioned before, I don't care about it when it comes to prediction. 
 
-![heatmap_2](/images/ds-03/heatmap_2.png){: .center-image .img-responsive}
+![heatmap_2](/assets/images/ds-03/heatmap_2.png){: .center-image .img-responsive}
 
 
 # Machine Learning
@@ -308,7 +308,7 @@ Finally! The part everyone's been waiting for. Nothing too complicated, just spl
 
 * **Linear Regression**: Multiple linear regression is a technique that uses multiple explanatory variables to predict the outcome of a single response variable through modeling the linear relationship between them. It is represented by the equation below: 
 
-![linear_reg](/images/ds-03/linear_reg.png){: .center-image .img-responsive}
+![linear_reg](/assets/images/ds-03/linear_reg.png){: .center-image .img-responsive}
 
 * **Support Vector Regression**: A Support Vector Machine is a classifier that aims to find the optimal hyper-plane (the separation line between the data classes with the error threshold value epsilon) by maximizing the margin (the boundary between classes and that which has the most distance between the nearest data point and the hyper-plane). In this project, a linear kernel was used.
 
@@ -340,9 +340,9 @@ The metrics used to measure the efficacy of these algorithms were:
 
 Not immediately clear which algorithm performs better. By visually representing them, we can see it better. Since correlation and R-squared are on different scales, I will seperate them from the rest of the metrics.
 
-![corrandr2](/images/ds-03/corrandr2.png){: .center-image .img-responsive}
+![corrandr2](/assets/images/ds-03/corrandr2.png){: .center-image .img-responsive}
 
-![error_metrics](/images/ds-03/error_metrics.png){: .center-image .img-responsive}
+![error_metrics](/assets/images/ds-03/error_metrics.png){: .center-image .img-responsive}
 
 Looking at the results above, we can see that Random Forest had the best performance out of all the algorithms. The next best algorithm was linear regression, due to it's low error scores. 
 
@@ -350,7 +350,7 @@ Looking at the results above, we can see that Random Forest had the best perform
 
 While looking at different blogs on the internet, I came upon something called `feature_importances`, which basically means the features most responsible for determining the revenue of a movie. This was done using Random Forest Regressor. In each individual tree in the forest, the decision is made based on the MSE (Mean Squared Error). When training individual trees, the degree of how each feature decreases the MSE can be averaged. The features are then ranked accordingly in ascending order. 
 
-![feat_importances](/images/ds-03/feat_importances.png){: .center-image .img-responsive}
+![feat_importances](/assets/images/ds-03/feat_importances.png){: .center-image .img-responsive}
 
 According to this, the number of votes garnered online and the budget allocated for a movie were the most important in determining the overall revenue of a movie. 
 

@@ -21,7 +21,7 @@ The company I'm currently interning at was planning to set up an on-premise data
 For my purposes, the data inside this lake would limited to .csv files. Files would come in on a daily basis and be stored in the lake. The on-premise data warehouse needs to take only the new files and upload them to its warehouse, on a timely basis. For the proof of concept, I was told to implement the warehouse using [Clickhouse](https://clickhouse.tech/), which is a columnar-oriented database system. For those who don't know, a columnar format like ORC or Parquet is much, much more efficient than row based formats like .csv. It's a godsend if you're working on the AWS ecosystem, because you get to save on both time and money. How you ask? In a simple sense, AWS charges you for both storage and query execution time. Since formats like Parquet take up much less space and are more efficient, you end up saving a lot of money in the long run.This comparison shows how amazing columnar-oriented file formats are: 
 
 
-| ![csv_vs_parquet.png](/images/programming-01/csv_vs_parquet.png "A massive improvement!") | 
+| ![csv_vs_parquet.png](/assets/images/programming-01/csv_vs_parquet.png "A massive improvement!") | 
 |:--:| 
 | *Source: [Medium](https://blog.openbridge.com/how-to-be-a-hero-with-powerful-parquet-google-and-amazon-f2ae0f35ee04)* |
 
@@ -72,7 +72,7 @@ sed -i '/^$/d' files_in_s3.txt # removies empty lines
 ```
 
 
-![sed_remove_slash.png](/images/programming-01/sed_remove_slash.png){: .center-image .img-responsive}
+![sed_remove_slash.png](/assets/images/programming-01/sed_remove_slash.png){: .center-image .img-responsive}
 
 
 Now's the interesting part. Remember I said that the warehouse only needs to downloaded the new files? Well here's how we do it. I keep a local text files containing the names of all the files that have been downloaded so far. Initially, this file would be empty. Then using the list of all files from S3, we perform a set difference between the files to get the files that we need to download. For those of you who are hazy on set theory, A-B basically says to take elements existing in A but not in B. So basically, all the new files. 
@@ -86,7 +86,7 @@ comm -1 -3 <(sort files_in_local.txt) <(sort files_in_s3.txt) > files_to_downloa
 ```
 
 
-![comm.png](/images/programming-01/comm.png){: .center-image .img-responsive}
+![comm.png](/assets/images/programming-01/comm.png){: .center-image .img-responsive}
 
 
 Next, we need to check if our local database is already up to date. This is easy, as we have to check if the files_to_download.txt is empty or not. If it is, we exit the script. Else, we move on. I iterate through each name in the text file and pass them to the `aws cp` command, with the `--quiet` option, so that my script's output looks clean. 
