@@ -1,5 +1,5 @@
 ---
-permalink: /blog/programming-01
+permalink: /programming-01
 title: "Bash Scripting for Automated AWS S3 Downloads"
 header:
   teaser: /assets/images/thumbnails/linux.jpg

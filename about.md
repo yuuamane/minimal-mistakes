@@ -1,30 +1,28 @@
 ---
-title: "Foo Bar Identity"
-excerpt: "Foo Bar design system including logo mark, website design, and branding applications."
-header:
-  image: /assets/images/foo-bar-identity.jpg
-  teaser: /assets/images/foo-bar-identity-th.jpg
-sidebar:
-  - title: "Role"
-    image: http://placehold.it/350x250
-    image_alt: "logo"
-    text: "Designer, Front-End Developer"
-  - title: "Responsibilities"
-    text: "Reuters try PR stupid commenters should isn't a business model"
-gallery:
-  - url: /assets/images/unsplash-gallery-image-1.jpg
-    image_path: assets/images/unsplash-gallery-image-1-th.jpg
-    alt: "placeholder image 1"
-  - url: /assets/images/unsplash-gallery-image-2.jpg
-    image_path: assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-  - url: /assets/images/unsplash-gallery-image-3.jpg
-    image_path: assets/images/unsplash-gallery-image-3-th.jpg
-    alt: "placeholder image 3"
+permalink: /about
+title: "About Me"
 ---
 
-Pictures of Goats section West Seattle Blog dingbat newspaper rubber cement Google+ newsroom cafe news.me rubber cement, Ushahidi Kindle Single syndicated Instagram HuffPo community mthomps, Mozilla iPhone app should isn't a business model curmudgeon Snarkmarket Tim Carmody production of innocence. Fuego tweets community DocumentCloud metered model Gardening & War section YouTube social media SEO information overload analytics Aron Pilhofer Journal Register data visualization WikiLeaks Groupon, collaboration Steve Jobs we need a Nate Silver AP What Would Google Do the power of the press belongs to the person who owns one Clay Shirky curmudgeon Voice of San Diego free as in beer dead trees the notion of the public Lucius Nieman.
+<style>
+  .center-image{
+      margin: 0 auto;
+      display: block;
+  }
+</style>
 
-{% include gallery caption="This is a sample gallery to go along with this case study." %}
+Hey. I'm Faaez Razeen. I'm a 20 year old final year undergraduate student studying CS at [BSACIST](https://crescent.education). 
 
-hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack of newspapers that you'll never read net neutrality algorithms RT algorithms TechCrunch 5% corruption, horse-race coverage Gardening & War section CTR try PR CPC David Cohn shoot a photo algorithms content is king Android Snarkmarket crowdfunding, Fuego Twitter topples dictators YouTube abundance WordPress Reuters try PR stupid commenters should isn't a business model bringing a tote bag to a knife fight.
+I came into Computer Science at a later point than most. Up until I started my admissions process for my undergraduate degree, I didn't even know what CS was. All I learned in school was about basic computer skills and the Microsoft suite of tools. After multiple sessions of googling, I decided to start learning Python. I started with Zed Shaw's Learn Python The Hard Way. For a while, I was really into it as coding was an entirely new experience. At a point I got frustrated since Zed asks us to copy his code verbatim- which might be a good way for some people to learn but after a point I got frustrated.  I stopped learning until I came to college and was introduced to the *wonderful* world of C Programming.
+
+I joined two weeks late than my fellow classmates. On my first ever lab class, I was thrown in and asked to code a simple program. If my memory serves right, it was a simple program for calculating simple interest. I never knew an iota of C, and I distinctly remember copying code from a person who was sitting beside me, and typing `#include<studio.h>` instead of `#include<stdio.h>` and wondering what the heck a studio had to do with any of this. After some good old Bucky Robert tutorials, I was solid on the basics and went from there. 
+
+From this point, programming was never an issue for me, atleast not at the level the pedagogy was at my institute. Many would be satisfied to just get a compiled program without errors but I would never give up without a fight. The only ever program to defeat me was a partition allocation method program for my Operating Systems laboratory. The thrill of getting the correct output and walking out early out of the exam room had it's own charm.
+
+Throughout my years in college, I experimented with many languages and many domains
+
+
+
+From the stars, 
+
+FR. 
+

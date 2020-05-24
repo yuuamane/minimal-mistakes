@@ -217,3 +217,7 @@ I am in no way entirely happy with the content I posted. It's just too simple. T
 From the stars, 
 
 FR. 
+
+
+<script src="https://gist.github.com/blazyy/304f020ce812d78501c5ea4fde1f0e25.js"></script>
+
