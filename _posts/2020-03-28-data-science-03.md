@@ -149,50 +149,11 @@ Next, looking at the barplot of the number of movies released each year, we can 
 ![count_of_movies_each_year](/assets/images/ds-03/count_of_movies_each_year.png){: .center-image .img-responsive}
 
 ```python
-pd.DataFrame(movies.groupby('release_year').sum()['budget'])
+pd.DataFrame(movies.groupby('release_year').sum()['budget']).tail(25)
 ```
 
 |   release_year |           budget |
 |---------------:|-----------------:|
-|           1929 |      379000      |
-|           1930 |      3.95e+06    |
-|           1932 |      1.6e+06     |
-|           1933 |      639000      |
-|           1934 |      325000      |
-|           1935 |      609000      |
-|           1936 |      2.7e+06     |
-|           1937 |      2e+06       |
-|           1938 |      3.64474e+06 |
-|           1939 |      8.277e+06   |
-|           1962 |      1.9262e+07  |
-|           1963 |      5.87016e+07 |
-|           1964 |      5.35e+07    |
-|           1965 |      5.215e+07   |
-|           1966 |      1.28778e+07 |
-|           1967 |      6.5e+06     |
-|           1968 |      3.4283e+07  |
-|           1969 |      6.68441e+07 |
-|           1970 |      9.92169e+07 |
-|           1971 |      3.4327e+07  |
-|           1972 |      1.471e+07   |
-|           1973 |      2.87158e+07 |
-|           1974 |      3.76671e+07 |
-|           1975 |      2.37e+07    |
-|           1976 |      3.01504e+07 |
-|           1977 |      1.48811e+08 |
-|           1978 |      1.499e+08   |
-|           1979 |      2.137e+08   |
-|           1980 |      2.786e+08   |
-|           1981 |      2.91875e+08 |
-|           1982 |      3.489e+08   |
-|           1983 |      3.03e+08    |
-|           1984 |      4.20425e+08 |
-|           1985 |      3.172e+08   |
-|           1986 |      3.36275e+08 |
-|           1987 |      3.6255e+08  |
-|           1988 |      4.192e+08   |
-|           1989 |      5.9686e+08  |
-|           1990 |      9.39248e+08 |
 |           1991 |      7.8e+08     |
 |           1992 |      8.481e+08   |
 |           1993 |      8.406e+08   |
@@ -220,7 +181,6 @@ pd.DataFrame(movies.groupby('release_year').sum()['budget'])
 |           2015 |      7.32028e+09 |
 |           2016 |      5.1269e+09  |
 
-*Woah, what a long table.*
 
 Looking at a heatmap of the revenue over different months of different years, we can see that most revenue is made in the months May, June, July, November, and December. 
 
@@ -309,20 +269,20 @@ Multicollinearity is when a feature may be correlated with another feature. For 
 
 Finally! The part everyone's been waiting for. Nothing too complicated, just split the datasets into testing and training sets and ran them through a plethora of regression algorithms:
 
-* **Linear Regression**: Multiple linear regression is a technique that uses multiple explanatory variables to predict the outcome of a single response variable through modeling the linear relationship between them. It is represented by the equation below: 
+* Linear Regression**: Multiple linear regression is a technique that uses multiple explanatory variables to predict the outcome of a single response variable through modeling the linear relationship between them. It is represented by the equation below: 
 
 ![linear_reg](/assets/images/ds-03/linear_reg.png){: .center-image .img-responsive}
 
-* **Support Vector Regression**: A Support Vector Machine is a classifier that aims to find the optimal hyper-plane (the separation line between the data classes with the error threshold value epsilon) by maximizing the margin (the boundary between classes and that which has the most distance between the nearest data point and the hyper-plane). In this project, a linear kernel was used.
+* Support Vector Regression**: A Support Vector Machine is a classifier that aims to find the optimal hyper-plane (the separation line between the data classes with the error threshold value epsilon) by maximizing the margin (the boundary between classes and that which has the most distance between the nearest data point and the hyper-plane). In this project, a linear kernel was used.
 
-* **Decision Tree Regression**: A decision tree is a supervised classification model that predicts by learning de-cision rules from features. It breaks down data into smaller subsets by making a decision based on asking a series of questions (the answers are either True or False), until the model gets confident enough to make a prediction. The end result is a tree, where the leaf nodes are the decisions. 
+* Decision Tree Regression**: A decision tree is a supervised classification model that predicts by learning de-cision rules from features. It breaks down data into smaller subsets by making a decision based on asking a series of questions (the answers are either True or False), until the model gets confident enough to make a prediction. The end result is a tree, where the leaf nodes are the decisions. 
 The questions asked at each node to determine the split are different for classi-fication and regression. For regression, the algorithm will first pick a value, and split the data into two subsets. For each subset, it calculates the MSE (mean squared error). The tree chooses the value with the smallest MSE value. After training, the algorithm runs it through the tree until it reaches a leaf node. The final prediction is the average of the value of the dependent variable in that leaf node. The usage of a single decision tree gave the worst results. While decision trees are supposed to be robust against collinearity, they did not perform better than linear regression.
 
-* **Random Forest Regression**: Random forest is an ensemble method, which means that it combines predictions from multiple machine learning algorithms, in this case, decision trees. The problem with decision trees is that they are very sensitive to training data and carry a big risk of overfitting. They also tend to find the local optima, as once they have made a decision, they cannot go back. This was evident by the fact that the R^2 value and correlation varied in each iteration of running the algorithm. Random forest contains multiple decision trees running in parallel, and in the end, averages the results of multiple predictions. Random forests with 100 trees were found to have the best results among all algorithms used in this project.
+* Random Forest Regression**: Random forest is an ensemble method, which means that it combines predictions from multiple machine learning algorithms, in this case, decision trees. The problem with decision trees is that they are very sensitive to training data and carry a big risk of overfitting. They also tend to find the local optima, as once they have made a decision, they cannot go back. This was evident by the fact that the R^2 value and correlation varied in each iteration of running the algorithm. Random forest contains multiple decision trees running in parallel, and in the end, averages the results of multiple predictions. Random forests with 100 trees were found to have the best results among all algorithms used in this project.
 
-* **Ridge Regression**: Ridge regression L2 uses regularization, which is a method used to avoid over-fitting by penalizing high-valued regression coefficients through shrinkage, where extreme values are shrunk towards a certain value. Particularly, In L2 regularization, the coefficients are penalized towards the square of the magnitude of the coefficients. Ridge regression is a technique used to mitigate multicollinearity in linear re-gression. While the fulfillment of the multi-collinearity assumption is not necessary for prediction and is only necessary for inference, using Ridge Regression decreased performance. The cause of this was not clear.
+* Ridge Regression**: Ridge regression L2 uses regularization, which is a method used to avoid over-fitting by penalizing high-valued regression coefficients through shrinkage, where extreme values are shrunk towards a certain value. Particularly, In L2 regularization, the coefficients are penalized towards the square of the magnitude of the coefficients. Ridge regression is a technique used to mitigate multicollinearity in linear re-gression. While the fulfillment of the multi-collinearity assumption is not necessary for prediction and is only necessary for inference, using Ridge Regression decreased performance. The cause of this was not clear.
 
-* **Lasso Regression**: Similar to ridge regression, lasso regression shrinks all coefficients towards a value, in this case, the absolute value of the magnitude of coefficients. This is called L1 regularization, and can sometimes lead to elimination of some coeffi-cients. Lasso regression had similar performance to Ridge regression.
+* Lasso Regression**: Similar to ridge regression, lasso regression shrinks all coefficients towards a value, in this case, the absolute value of the magnitude of coefficients. This is called L1 regularization, and can sometimes lead to elimination of some coeffi-cients. Lasso regression had similar performance to Ridge regression.
 
 The metrics used to measure the efficacy of these algorithms were:
 - Mean Absolute Error
