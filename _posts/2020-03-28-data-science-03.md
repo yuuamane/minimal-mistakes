@@ -271,7 +271,9 @@ Finally! The part everyone's been waiting for. Nothing too complicated, just spl
 
 * Linear Regression**: Multiple linear regression is a technique that uses multiple explanatory variables to predict the outcome of a single response variable through modeling the linear relationship between them. It is represented by the equation below: 
 
+
 ![linear_reg](/assets/images/ds-03/linear_reg.png){: .center-image .img-responsive}
+
 
 * Support Vector Regression**: A Support Vector Machine is a classifier that aims to find the optimal hyper-plane (the separation line between the data classes with the error threshold value epsilon) by maximizing the margin (the boundary between classes and that which has the most distance between the nearest data point and the hyper-plane). In this project, a linear kernel was used.
 
@@ -285,10 +287,10 @@ The questions asked at each node to determine the split are different for classi
 * Lasso Regression**: Similar to ridge regression, lasso regression shrinks all coefficients towards a value, in this case, the absolute value of the magnitude of coefficients. This is called L1 regularization, and can sometimes lead to elimination of some coeffi-cients. Lasso regression had similar performance to Ridge regression.
 
 The metrics used to measure the efficacy of these algorithms were:
-- Mean Absolute Error
-- Mean Squared Error
-- Root Mean Squared Error
-- R-squared (coefficient of determination)
+* Mean Absolute Error
+* Mean Squared Error
+* Root Mean Squared Error
+* R-squared (coefficient of determination)
 
 ## Results
 
