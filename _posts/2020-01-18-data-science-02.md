@@ -125,7 +125,7 @@ url = 'https://api.foursquare.com/v2/venues/explore?&client_id={}&client_secret=
   # make the GET request
   results = requests.get(url).json()["response"]['groups'][0]['items']
 ```
-After doing this for each neighborhood, the resulting venues are again put into a `pandas` dataframe. Sorry for those who have OCD. I cannot get these tables centered for some reason. Github Pages has some limitation or something? Idk man I'm tired. 
+After doing this for each neighborhood, the resulting venues are again put into a `pandas` dataframe.
 
 |    | Neighborhood   |   Neighborhood Latitude |   Neighborhood Longitude | Venue                   | Venue ID                 |   Venue Latitude |   Venue Longitude | Venue Category          |
 |---:|:---------------|------------------------:|-------------------------:|:------------------------|:-------------------------|-----------------:|------------------:|:------------------------|
