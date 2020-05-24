@@ -1,11 +1,10 @@
 ---
 title: "About Me"
+layout: collection
 permalink: /about/
-header:
-  teaser: /assets/images/red_nebula.jpg
-comments: false
-excerpt: "Just about me."
-date: May 24th, 2020.
+collection: portfolio
+entries_layout: grid
+classes: wide
 ---
 
 <style>
