@@ -53,7 +53,6 @@ As I was also learning at the same time I was doing the project, I wasted a LOT 
 
 # A Better Approach
 
-
 ## Data Integration
 
 I used two datasets from Kaggle. Dataset1 had 45,000 samples and Dataset2 had 5000. I did an [inner join](https://www.w3resource.com/sql/joins/perform-an-inner-join.php) on them using the IMDb ID column to combine both datsets. I did this in order to hopefully get a better prediction due to more number of features. Although this isn't a good idea in some cases. If you have a crap-ton of features, the algorithm needs more computer resources for execution, and there is a possibility of multicollinearity affecting prediction. This is the reason why dimensionality reduction techniques exist. Too much of something is not good. 
