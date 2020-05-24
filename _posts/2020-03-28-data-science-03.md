@@ -1,6 +1,6 @@
 ---
 permalink: /data-science-03
-title: "Predicting Movie Revenue using Regression Techniques"
+title: "Predicting Movie Revenue using Machine Learning"
 header:
   teaser: /assets/images/thumbnails/movie_theatre.jpg
 comments: true
