@@ -1,6 +1,7 @@
 ---
 permalink: /about/
 title: "About Me"
+layout: posts
 ---
 
 <style>
@@ -18,7 +19,9 @@ I joined two weeks late than my fellow classmates. On my first ever lab class, I
 
 From this point, programming was never an issue for me, atleast not at the level the pedagogy was at my institute. Many would be satisfied to just get a compiled program without errors but I would never give up without a fight. The only ever program to defeat me was a partition allocation method program for my Operating Systems laboratory. The thrill of getting the correct output and walking out early out of the exam room had it's own charm.
 
-Throughout my years in college, I experimented with many languages and many domains
+Throughout my years in college, I experimented with many languages and many domains. I've written programs in C, C++, Java, Python, queried databases using SQL, made small CRUD applications using the LAMP stack, made very (*very*) basic Android applications, and eventually made my own landing page for my website using pure HTML, CSS, and Javascript. I never became proficient in any of these due to my multiple experimentations (*thank you, my curious brain*), but I've learned something along the way and I'm happy that I got to try these before settling on something to get good at. 
+
+At this point, I'm still struck between two things to have a career in- data science and software engineering. While the prospect extracting useful information from a pile of seemingly useless data seems  
 
 
 
