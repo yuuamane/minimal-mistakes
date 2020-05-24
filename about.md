@@ -1,7 +1,7 @@
 ---
 permalink: /about/
 title: "About Me"
-layout: posts
+excerpt: "Just about me."
 ---
 
 <style>
