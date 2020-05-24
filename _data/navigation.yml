@@ -2,13 +2,13 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Space"
-    url: /space/
   - title: "Resume"
     url: /assets/docs/Resume_Faaez_Razeen.pdf
   - title: "Archive"
     url: /archive/
- 
+  - title: "Space"
+    url: /space/
+
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
