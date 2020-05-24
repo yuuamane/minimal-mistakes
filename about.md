@@ -1,7 +1,11 @@
 ---
-permalink: /about/
 title: "About Me"
+permalink: /about/
+header:
+  teaser: /assets/images/red_nebula.jpg
+comments: false
 excerpt: "Just about me."
+date: May 24th, 2020.
 ---
 
 <style>
