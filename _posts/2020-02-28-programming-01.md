@@ -1,6 +1,6 @@
 ---
 permalink: /blog/programming-01
-title: "Bash scripting for Automated AWS S3 Downloads"
+title: "Bash Scripting for Automated AWS S3 Downloads"
 header:
   teaser: /assets/images/thumbnails/linux.jpg
 comments: true
