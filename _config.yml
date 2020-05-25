@@ -99,7 +99,7 @@ author:
   avatar           : "/assets/images/fr-pfp.jpg"
   bio              : "Welcome to Faaez's website. He isn't here right now, as he is probably doing other things, like baking a cake, or dismantling a device which he has no plans to put back together."
   location         : "Chennai, India"
-  email            : razeenfaaez@gmail.com
+  email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
