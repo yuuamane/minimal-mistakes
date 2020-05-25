@@ -269,7 +269,5 @@ collections:
     portfolio:
         output: true
         permalink: /:collection/:path/
-        values:
-        layout: single
+    values:
         author_profile: true
-        share: true
