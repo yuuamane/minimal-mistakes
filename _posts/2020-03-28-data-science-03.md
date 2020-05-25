@@ -4,7 +4,7 @@ title: "Predicting Movie Revenue using Machine Learning"
 header:
   teaser: /assets/images/thumbnails/movie_theatre.jpg
 comments: true
-excerpt: "A post on how I leveraged machine learning in order to predict the revenue of a movie, and also determine which features are most important in determining the revenue."
+excerpt: "A post on how I leveraged machine learning in order to predict the revenue of a movie, and also determine which features are most important in determining it."
 date: March 28th, 2020
 ---
 
