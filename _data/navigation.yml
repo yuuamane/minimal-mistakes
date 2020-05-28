@@ -1,9 +1,5 @@
 # main links
 main:
-  - title: "About"
-    url: /about/
-  - title: "Resume"
-    url: /assets/docs/Resume_Faaez_Razeen.pdf
   - title: "Archive"
     url: /archive/
   - title: "Space"
